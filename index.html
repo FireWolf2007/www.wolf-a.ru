@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="description" content="Volf Alexander, Java developer, PHP developer, Project manager" />
-    <script async src="js/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -22,6 +22,12 @@
             <a class="navbar-brand" id="idnavbarbrand" style="display: none;margin-left: 0px;" href="#">
                 Volf Alexander
             </a>
+            <button type="button" class="navbar-toggle" onclick="toggleNavbar()">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
         <div>
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -30,8 +36,8 @@
                     <li><a style="display: none;" href="#section1">info</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li style="background-color: #e7e7e7;"><a href="#">ENGLISH</a></li>
-                    <li><a href="index_ru.html">РУССКИЙ</a></li>
+                    <li class="hidden-sm" style="background-color: #e7e7e7;"><a href="#">ENGLISH</a></li>
+                    <li class="hidden-sm"><a href="index_ru.html">РУССКИЙ</a></li>
                 </ul>
             </div>
         </div>
@@ -48,11 +54,13 @@
                  width="279" height="279" border="0"/>
         </div>
         <div class="col-md-4">
-            <p align="left">Male,&nbsp;31&nbsp;year,</p>
+            <p align="left">Male,&nbsp;33&nbsp;year,</p>
             <p align="left">born&nbsp;on&nbsp;3&nbsp;Apr&nbsp;1985
             </p>
 
             <p align="left"> Russia, Krasnodar<br/>
+                not willing to relocate,<br/>
+                prepared for occasional business trips</p>
         </div>
         <div class="col-md-4">
             <p align="left"> +7&nbsp;918&nbsp;3201880</p>
@@ -62,8 +70,9 @@
             </p>
 
             <p align="left"><!-- skype: volf.alexander.quickpay<br/> -->
-            <a href="http://hh.ru/resume/8cf0ccd8ff03a096e00039ed1f73323736445a">This resume on hh.ru</a><br/>
-             <a href="https://github.com/FireWolf2007">Me on Github</a></p>
+            <a href="https://hh.ru/resume/8cf0ccd8ff03a096e00039ed1f73323736445a">This resume on hh.ru</a><br/>
+            <a href="https://github.com/FireWolf2007">Me on Github</a><br/>
+            <a href="https://wiki.wolf-a.ru/">My notes in WIKI</a></p>
         </div>
     </div>
 
@@ -121,13 +130,14 @@
             <p>Java developer</p>
 
             <p class="lead">
-                I'm working with jhipster, docker, Spring: core/boot/data​/cloud stream (Kafka), liqubase, Elasticsearch, AngularJS.<br/>
+                I'm working with jhipster, docker, Spring: core/boot/data/cloud stream (Kafka), liqubase, Elasticsearch, AngularJS, Angular 5, JAXB.<br/>
                 <br/>
                 I'm participate in developing telemarketing system and management system of the cloud PBX (Megafon megapbx.ru) for analysis of the quality of work managers working in real estate sales.<br/>
                 <br/>
                 Achivements:<br/>
                 API for downloading and listening phone call from cian.ru<br/>
                 API for high grade management of cloud PBX (megapbx.ru): phones configuration, phone calls redirections, employee and division management, phone call listening; improved callback method for events and information loading about phone calls.<br/>
+                I set up and started Kafka cluster: kafka on 2 servers in docker, zookeeper on 3 servers on host system.<br/>
             </p>
         </div>
     </div>
@@ -315,16 +325,13 @@
         PHP: developing web и standalone applications since 2001 year
         without and with frameworks, main skills with Zend framework (integration
         with existing system).<br/>
-        С/С++:
-        network applications, Tumar cryptography library
+        С/С++:network applications, Tumar cryptography library
         (Kazakhstan, 2011г.), STL.<br/>
         Other langs/skills:
         Pascal/FreePascal, C# (Mono, WinCE .Net), Arduino, GWT, JavaScript,
         jQuery, Assembler (DOS, Win32, BSD/Linux).<br/>
         IDE: PhpStorm,
         Eclipse, MonoDevelop, MSVS 2005, Lazarus, Arduino IDE.<br/>
-        <br/>
-        This site was build on bootstrap - intresting, new technology for me.
     </p>
 </div>
 
@@ -332,8 +339,12 @@
     <div class="page-header">
         <h1>Recomendations</h1>
     </div>
-
-    <p class="lead">4Д проект (Quickpay) - Akhmerov Ramil</p>
+    <p class="lead">4D proekt (Quickpay), LLC - Akhmerov Ramil&nbsp;(CEO)&nbsp;</p>
+    <p class="lead">4D proekt (Quickpay), LLC - Sohorev Sergey&nbsp;(PHP developer)&nbsp;</p>
+    <p class="lead">МПС (MPS Quickpay), LLC - Bezrouchkin Eugene&nbsp;(CEO)&nbsp;</p>
+    <p class="lead">МПС (MPS Quickpay), LLC - Abramov Anton&nbsp;(PHP developer)&nbsp;</p>
+    <p class="lead">МПС (MPS Quickpay), LLC - Radyk Sergey&nbsp;(C/C++ developer)&nbsp;</p>
+    <p class="lead">System Quickpay, LLC - Timur Asanov&nbsp;(CEO)&nbsp;</p>
 </div>
 <div class="row">
     <div class="page-header">
@@ -387,4 +398,7 @@
             $('#idnavbarbrand').fadeIn();
         }
     });
+    function toggleNavbar() {
+        $('#myNavbar').toggleClass('in');
+    }
 </script>
