@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /LARGE/
 sitemap: https://www.wolf-a.ru/sitemap.xml
